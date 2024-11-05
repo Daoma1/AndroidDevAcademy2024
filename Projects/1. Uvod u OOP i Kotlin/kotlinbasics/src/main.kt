@@ -1,5 +1,7 @@
+import homework.classes.*
+
 fun main() {
-    runExample1()
+//    runExample1()
 //    runExample2()
 //    runExample3()
 //    runExample4()
@@ -17,5 +19,21 @@ fun main() {
 //    runExample16()
 //    runExample17()
 //    runExample18()
+
+//    runHomework01()
+//    runHomework02()
+//    runHomework03()
+//    runHomework04()
+//    runHomework05()
+//    runHomework06()
+//    runHomework07()
+//    runHomework08()
+//    runHomework09()
+//    runHomework10()
+//    runHomework11()
+//    runHomework12()
+//    runHomework13()
+//    runHomework14()
+    runHomework15()
 }
 
