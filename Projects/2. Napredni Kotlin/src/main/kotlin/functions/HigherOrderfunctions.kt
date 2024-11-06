@@ -1,6 +1,6 @@
 package functions
 
-val noParamFunType: () -> Unit = {}
+val noParamFunType: () -> Unit = { println("Anything") }
 
 val oneParamFunType: (String) -> Unit = { println(it) }
 
