@@ -1,4 +1,4 @@
-package homework.classes
+package homework.classes.cards
 
 enum class Face(val value: Int) {
     Two(2), Three(3), Four(4),

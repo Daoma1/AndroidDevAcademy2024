@@ -1,15 +1,21 @@
-import homework.classes.*
+import homework.classes.runHomework14
+import homework.loops.runHomework06
 
 fun main() {
+    runExamples()
+    runHomeworks()
+}
+
+fun runExamples() {
 //    runExample1()
 //    runExample2()
-//    runExample3()
-//    runExample4()
-//    runExample5()
-//    runExample6()
-//    runExample7()
-//    runExample8()
-//    runExample9()
+//    runExample03()
+//    runExample04()
+//    runExample05()
+//    runExample06()
+//    runExample07()
+//    runExample08()
+//    runExample09()
 //    runExample10()
 //    runExample11()
 //    runExample12()
@@ -19,7 +25,9 @@ fun main() {
 //    runExample16()
 //    runExample17()
 //    runExample18()
+}
 
+fun runHomeworks() {
 //    runHomework01()
 //    runHomework02()
 //    runHomework03()
@@ -34,6 +42,6 @@ fun main() {
 //    runHomework12()
 //    runHomework13()
 //    runHomework14()
-    runHomework15()
+//    runHomework15()
 }
 

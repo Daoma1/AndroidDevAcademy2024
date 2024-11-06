@@ -1,12 +1,12 @@
 package examples.loops
 
-fun runExample6() {
+fun runExample06() {
     repeat(3) {
         println("I will not waste loops.")
     }
 }
 
-fun runExample7() {
+fun runExample07() {
     for (i in (1..5)) {
         println("$i is ${if (i % 2 == 0) "even" else "odd"}")
     }
@@ -15,7 +15,7 @@ fun runExample7() {
     }
 }
 
-fun runExample8() {
+fun runExample08() {
     var dragonsHatched = 0
     println("How many dragons do you need to conquer Westeros?")
     var dragonsNeeded = readln().toInt()
@@ -26,7 +26,7 @@ fun runExample8() {
     println("Total dragons hatched = $dragonsHatched/$dragonsNeeded")
 }
 
-fun runExample9() {
+fun runExample09() {
     var dragonsHatched = 0
     println("How many dragons do you need to conquer Westeros?")
     var dragonsNeeded = readln().toInt()

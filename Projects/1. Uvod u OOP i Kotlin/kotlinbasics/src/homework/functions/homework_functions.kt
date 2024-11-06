@@ -1,8 +1,9 @@
-package homework
+package homework.functions
 
 import kotlin.math.sqrt
 
 fun runHomework07() {
+    // Could a function be created to avoid repetition in this function?
     println("3 to the power of 3 = ${findNthPower(3, 3)}")
     println("9 to the power of 2 = ${findNthPower(9, 2)}")
     println("-3 to the power of 2 = ${findNthPower(-3, 2)}")
@@ -12,6 +13,7 @@ fun runHomework07() {
 }
 
 fun runHomework08() {
+    // Could a function be created to avoid repetition in this function?
     println("2 ${if(isPrime(2)) "is" else "isn't" } a prime number.")
     println("9 ${if(isPrime(9)) "is" else "isn't" } a prime number.")
     println("10 ${if(isPrime(10)) "is" else "isn't" } a prime number.")

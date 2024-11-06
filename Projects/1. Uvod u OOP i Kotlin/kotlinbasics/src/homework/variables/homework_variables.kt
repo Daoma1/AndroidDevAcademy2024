@@ -1,4 +1,4 @@
-package homework
+package homework.variables
 
 fun runHomework01() {
     val birthYear = 1987

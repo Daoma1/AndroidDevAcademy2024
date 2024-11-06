@@ -1,8 +1,9 @@
-package homework.classes
+package homework.classes.geometry
 
 import kotlin.math.sqrt
 
 class Point(var x: Int = 0, var y: Int = 0) {
+
     constructor(coordinate: Int) : this(coordinate, coordinate)
 
     fun translate(shiftX: Int, shiftY: Int) {

@@ -1,5 +1,9 @@
 package homework.classes
 
+import homework.classes.cards.Deck
+import homework.classes.geometry.Circle
+import homework.classes.geometry.Point
+import homework.classes.yahtzee.*
 import kotlin.random.Random
 
 fun runHomework12() {
@@ -55,18 +59,18 @@ fun runHomework14() {
     do {
         luckyHand.roll()
         counter++
-    } while (!YahtzeeChecker.isYahtzee(luckyHand))
+    } while (!YahtzeeEvaluator.isYahtzee(luckyHand))
     println("It took $counter attempts to get a Yahtzee")
     println(luckyHand.getAsString())
-    println("Is it also a poker? ${YahtzeeChecker.isPoker(luckyHand)}")
-    println("Is it also a full house? ${YahtzeeChecker.isFullHouse(luckyHand)}")
+    println("Is it also a poker? ${PokerEvaluator.isPoker(luckyHand)}")
+    println("Is it also a full house? ${FullHouseEvaluator.isFullHouse(luckyHand)}")
 
     println("Rolling for full house.")
     counter = 0
     do {
         luckyHand.roll()
         counter++
-    } while (!YahtzeeChecker.isFullHouse(luckyHand))
+    } while (!FullHouseEvaluator.isFullHouse(luckyHand))
     println("It took $counter attempts to get a full house")
     println(luckyHand.getAsString())
 }

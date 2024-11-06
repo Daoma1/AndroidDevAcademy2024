@@ -1,4 +1,4 @@
-package homework.classes
+package homework.classes.yahtzee
 
 import kotlin.random.Random
 
@@ -33,11 +33,31 @@ class Hand(generator: Random) {
 
     fun getDieFaceFor(index: Int): Int = dice[index].face
 
+    fun getRolledCounts(): List<Int> {
+        // It could (and it does) make sense to use a different collection type here. Which one?
+        // Listen to Luka on the next lecture and replace this with a dictionary.
+        // Or create your own class for this. Returning a list such as this one makes it harder
+        // for everyone to understand the code. Although simple, it makes you think what is going on.
+        val counts = mutableListOf(0, 0, 0, 0, 0, 0)
+        for (i in 0 until handSize) {
+            counts[getDieFaceFor(i) - 1]++
+        }
+        return counts
+    }
+
     fun roll() {
-        for ((die, lock) in dice.zip(locks)) {
-            if (!lock) {
-                die.roll()
+        for (i in 0 until handSize) {
+            if(!locks[i]) {
+                dice[i].roll()
             }
         }
+        // Try to do it with a for loop and iterating over the indices of the collections.
+        // Learn about the zip operator from Luka.
+        // Can you maybe make the Die itself lockable?
+        // for ((die, lock) in dice.zip(locks)) {
+        //     if (!lock) {
+        //         die.roll()
+        //     }
+        // }
     }
 }

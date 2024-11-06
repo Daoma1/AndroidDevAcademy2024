@@ -1,4 +1,4 @@
-package homework.classes
+package homework.classes.yahtzee
 
 import kotlin.random.Random
 

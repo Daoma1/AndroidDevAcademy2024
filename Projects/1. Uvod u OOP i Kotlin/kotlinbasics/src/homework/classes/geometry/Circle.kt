@@ -1,8 +1,9 @@
-package homework.classes
+package homework.classes.geometry
 
 import kotlin.math.PI
 
 class Circle(val radius: Double = 1.0) {
+
     fun calculateArea(): Double {
         return radius * radius * PI
     }

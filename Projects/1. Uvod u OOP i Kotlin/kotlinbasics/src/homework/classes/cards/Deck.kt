@@ -1,4 +1,4 @@
-package homework.classes
+package homework.classes.cards
 
 class Deck {
     private val cards: MutableList<Card> = mutableListOf()

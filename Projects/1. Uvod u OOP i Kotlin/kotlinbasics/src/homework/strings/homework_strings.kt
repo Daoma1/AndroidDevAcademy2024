@@ -1,4 +1,4 @@
-package homework
+package homework.strings
 
 fun runHomework09() {
     println("P4ss - ${isStrongPasswordCandidate("P4ss")}")

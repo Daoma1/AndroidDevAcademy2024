@@ -1,4 +1,4 @@
-package homework
+package homework.flowcontrol
 
 fun runHomework03() {
     println("Please, enter three integers.")

@@ -1,7 +1,6 @@
-package homework
+package homework.loops
 
 import kotlin.math.abs
-import kotlin.math.max
 
 fun runHomework05() {
     println("Please, enter a positive number: ")
