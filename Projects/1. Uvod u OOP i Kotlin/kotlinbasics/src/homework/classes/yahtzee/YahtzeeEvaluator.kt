@@ -1,12 +1,11 @@
-package homework.classes
+package homework.classes.yahtzee
 
-object YahtzeeChecker {
+object YahtzeeEvaluator {
+
     private const val YAHTZEE_COUNT = 5
-    private const val POKER_COUNT = 4
 
-    // Could the result of a check be an object of its own?
     fun isYahtzee(hand: Hand): Boolean {
-        val counts = getCounts(hand)
+        val counts = hand.getRolledCounts()
         // A lot of things could be simplified after Lukas lecture
         // val isYahtzee = counts.any { it == YahtzeeCount }
         for (count in counts) {
@@ -16,12 +15,19 @@ object YahtzeeChecker {
         }
         return false
     }
+}
 
-    fun isPoker(hand: Hand): Boolean = getCounts(hand).any { it > POKER_COUNT }
+object PokerEvaluator {
+
+    private const val POKER_COUNT = 4
+
+    fun isPoker(hand: Hand): Boolean = hand.getRolledCounts().any { it >= POKER_COUNT }
+}
+
+object FullHouseEvaluator {
 
     fun isFullHouse(hand: Hand): Boolean {
-        val counts = getCounts(hand)
-
+        val counts = hand.getRolledCounts()
         var hasThreeOfKind = false
         var threeOfKindIndex = -1
         for (i in 0 until counts.size) {
@@ -39,14 +45,5 @@ object YahtzeeChecker {
             }
         }
         return false
-    }
-
-    private fun getCounts(hand: Hand): List<Int> {
-        // It could make sense to use a different collection type here. Which one?
-        val counts = mutableListOf(0, 0, 0, 0, 0, 0)
-        for (i in 0 until hand.handSize) {
-            counts[hand.getDieFaceFor(i) - 1]++
-        }
-        return counts
     }
 }
